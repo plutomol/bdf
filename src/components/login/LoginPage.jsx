@@ -1,12 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import './css/LoginPage.css'
+import './login.css'
 
 function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState('')
   const navigate = useNavigate()
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && localStorage.getItem('isLoggedIn') === 'true') {
+      navigate('/home')
+    }
+  }, [navigate])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -24,6 +30,7 @@ function LoginPage() {
       const result = await response.text()
 
       if (response.ok && result.toLowerCase().includes('success')) {
+        localStorage.setItem('isLoggedIn', 'true')
         navigate('/home')
       } else {
         setMessage('Login failed. Please try again.')
@@ -38,7 +45,7 @@ function LoginPage() {
     <div>
       <h1>Blood Donor Finder</h1>
       <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="login-container" onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="Email"
@@ -59,7 +66,7 @@ function LoginPage() {
       </form>
       {message && <p>{message}</p>}
       <p>Please sign in to continue.</p>
-      <Link to="/register">Register</Link>
+      <Link to="/register"><u><p>Register</p></u></Link>
     </div>
   )
 }
