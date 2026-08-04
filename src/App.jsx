@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import LoginPage from './components/login/LoginPage.jsx'
 import Register from './components/login/Register.jsx'
 import HomePage from './components/homepage/HomePage.jsx'
+import Profile from './components/profile/Profile.jsx'
 
 function ProtectedRoute({ children }) {
   const isLoggedIn = typeof window !== 'undefined' && localStorage.getItem('isLoggedIn') === 'true'
@@ -20,6 +21,14 @@ function App() {
         element={
           <ProtectedRoute>
             <HomePage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <ProtectedRoute>
+            <Profile />
           </ProtectedRoute>
         }
       />

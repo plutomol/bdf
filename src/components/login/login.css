@@ -4,9 +4,9 @@ body {
   background: #f3a4a4;
 }
 
-.login-container {
+.form-container {
   width: 100%;
-  max-width: 360px;
+  max-width: 400px;
   margin: 20px auto;
   padding: 24px;
   background: white;
@@ -19,15 +19,21 @@ h1, h2 {
   color: #bd0101;
   margin-bottom: 20px;
   text-align: center;
-  
 }
 
-input {
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input,
+select {
   width: 100%;
   padding: 10px;
-  margin: 8px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
+  box-sizing: border-box;
 }
 
 button {
@@ -45,7 +51,12 @@ button:hover {
   background: #df0101;
 }
 
+.form-message {
+  color: #0b7a0b;
+  margin-top: 10px;
+}
+
 p, a {
-  color: #bd0101;
+  color: #968f8f;
   text-align: center;
 }

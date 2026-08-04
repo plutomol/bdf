@@ -45,7 +45,7 @@ function LoginPage() {
     <div>
       <h1>Blood Donor Finder</h1>
       <h2>Login</h2>
-      <form className="login-container" onSubmit={handleSubmit}>
+      <form className="form-container" onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="Email"
@@ -64,7 +64,7 @@ function LoginPage() {
         <br />
         <button type="submit">Login</button>
       </form>
-      {message && <p>{message}</p>}
+      {message && <p className="form-message">{message}</p>}
       <p>Please sign in to continue.</p>
       <Link to="/register"><u><p>Register</p></u></Link>
     </div>
