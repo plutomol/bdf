@@ -1,0 +1,48 @@
+.profile-container {
+	max-width: 420px;
+	margin: 5px auto;
+	padding: 5px;
+	text-align: center;
+    border: 3px solid red;
+    border-radius: 10%;
+    box-shadow: 10px 20px 5px grey;
+}
+
+.profile-container h2 {
+	margin-bottom: 24px;
+	color: #263238;
+}
+
+.profile-details {
+	margin-bottom: 24px;
+}
+
+.profile-avatar {
+	width: 112px;
+	height: 112px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid #e53935;
+}
+
+.profile-name {
+	margin: 16px 0 6px;
+	font-size: 22px;
+	font-weight: 600;
+	color: #263238;
+}
+
+.profile-email {
+	margin: 0;
+	font-size: 15px;
+	color: #607d8b;
+}
+
+.profile-back-link {
+	color: #c62828;
+	text-decoration: none;
+}
+
+.profile-back-link:hover {
+	text-decoration: underline;
+}

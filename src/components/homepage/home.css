@@ -61,6 +61,7 @@ body {
 
 button {
   padding: 10px 15px;
+  width:400px;
   border: none;
   border-radius: 6px;
   background: #b30000;

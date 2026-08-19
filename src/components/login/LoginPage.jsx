@@ -24,6 +24,7 @@ function LoginPage() {
     try {
       const response = await fetch('http://localhost/loginAction.php', {
         method: 'POST',
+        credentials: 'include',
         body: formData,
       })
 

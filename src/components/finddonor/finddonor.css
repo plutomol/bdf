@@ -1,0 +1,57 @@
+/* Simple styles for find donor component */
+.finddonor-container {
+	padding: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.filters {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.filters select,
+.filters input {
+	padding: 8px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.filters button {
+	padding: 8px 12px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+
+
+.results {
+	margin-top: 16px;
+}
+
+.result-row {
+	display: flex;
+	gap: 12px;
+	padding: 12px;
+	align-items: center;
+	border: 1px solid #eee;
+	border-radius: 6px;
+	margin-bottom: 8px;
+	background: #fafafa;
+}
+
+.cell { min-width: 0 }
+.cell.name { flex: 2; font-weight: 600 }
+.cell.bg { flex: 0 0 80px }
+.cell.addr { flex: 2; color: #555 }
+.cell.contact { flex: 0 0 140px }
+.cell.action { flex: 0 0 100px }
+
+.small-btn {
+width: 100px;
+}
+.result-row button { padding: 6px 10px; cursor: pointer }
+
+.no-results { color: #666; padding: 12px }
+

@@ -20,7 +20,7 @@ function HomePage() {
           <h1>Blood Donor Finder</h1>
           <p className="success">Login successful. You are now logged in!</p>
           <div className="buttons">
-            <button>Find Donors</button>
+            <Link to="/finddonor"><button>Find Donors</button></Link>
             <button>Look Campaigns</button>
           </div>
         </div>
